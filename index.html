@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- mobile metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<title>WT Website</title>
+</head>
+
+<body>
+	<div class="header">
+		<h1 class="logo"> Buy TShirts Online </h1>
+		<nav>
+			<ul class="nav_links">
+				<li><a href="#" style="color: black;"> About Us </a></li>
+				<li><a href="vieworders.php" style="color: black;"> View Orders </a></li>
+			</ul>
+			
+				
+		</nav>
+		<a class="cta" href="login.php"><button>Sign Up</button></a>
+	</div>
+
+
+	<div class="about_section">
+		<div class="container">
+			<h1 class="about_taital">About <span style="background-color: #F3164D; color: #fff; padding: 0px 5px;">Us</span></h1>
+			<div class="about_bg">
+				<div class="row">
+					<div class="col-md-8">
+						<p class="about_long_text" id="seemorep">T-shirts are one of the most popular garments in fashion all around the world. From lounging, casual day-outs, to vacations and even formal events, a good T-shirt takes you everywhere. T-shirts initially came out in the 1900s for the first time when the US Navy made them part of their uniform. These were plain, short-sleeved white T-shirts with a crew neck. It was around the late 1960s that it became a mode of personal style, like a walking souvenir of art,</p>
+                        <div id="seemorediv"></div>
+						<button class="about_bt" id="seemorebtn">SEE MORE</button>
+						
+					</div>
+					<div class="col-md-4">
+						<div class="table_img"><img class="img1" src="images/tshirt.png"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="products_section">
+		<div class="container">
+			<h1 class="about_taital" style="text-align: center;"> Our <span style="background-color: #F3164D; color: #fff; padding: 0px 5px;">Products</span></h1>
+		</div>
+	</div>
+
+	<div class="rowproducts" id="products">
+		<div class="product_img img-1"><img src="images/tshirt.png"></div>
+		<div class="product_img img-2"><img src="images/tshirt.png"></div>
+
+	</div>
+		
+<div class="buttoncontainer">
+		<button class="btn-primary" id="btn1"> Show/Hide </button>
+</div>
+
+<!-- JQuery Script For Animation -->
+	<script>
+		$(document).ready(function () {
+		 
+		   $("#btn1").click(function(){
+			  $('#products').toggle(500);
+				 $('#products').fadeOut(500);
+				 $('#products').fadeIn(500);
+				 $('#products').slideDown(500);
+		});
+	 });
+	 </script>
+
+<!-- Jquery Script For Loading Text Using Ajax -->
+<script>
+	$(document).ready(function(){
+	  $("#seemorebtn").click(function(){
+		$('#seemorediv').load('a1.txt');
+	  });
+	});
+	</script>
+
+</body>
